@@ -168,7 +168,9 @@
                         }
 
                         Webcam.snap(function(data_uri) {
-                            scope.snapshot = data_uri;
+                            $timeout(function() {
+                                scope.snapshot = data_uri;
+                            });
                         });
                     });
                 } else {
@@ -177,7 +179,9 @@
                     }
 
                     Webcam.snap(function(data_uri) {
-                        scope.snapshot = data_uri;
+                        $timeout(function() {
+                            scope.snapshot = data_uri;
+                        });
                     });
                 }
             };
